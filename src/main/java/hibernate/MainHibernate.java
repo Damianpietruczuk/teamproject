@@ -5,22 +5,20 @@ import java.util.List;
 
 public class MainHibernate {
     public static void main(String[] args) {
-        EmployeeDao employeeDao = new EmployeeDao();
+        HibernateDao hibernateDao = new HibernateDao();
         Employees employee = new Employees("Test", "Test", "Test", "Test", 1000, 18 , new Date(), 1);
-        employeeDao.saveEmployee(employee);
-        List<Employees> employeesList = employeeDao.getEmployees();
+        hibernateDao.saveHibernateEntity(employee);
+        List<Employees> employeesList = hibernateDao.getEmployees();
 
         Employees employeeToUpdate = employeesList.get(0);
         employeeToUpdate.setSalary(9999);
 
-        employeeDao.updateEmployees(employeeToUpdate);
+        hibernateDao.updateHibernateEntity(employeeToUpdate);
         employeesList.forEach(System.out::println);
-
-        PhoneDao phoneDao = new PhoneDao();
 
         Phones phones = new Phones("Sony", "Xperia 10");
 
-        phoneDao.savePhones(phones);
-        phoneDao.getPhones().forEach(System.out::println);
+        hibernateDao.saveHibernateEntity(phones);
+        hibernateDao.getPhones().forEach(System.out::println);
     }
 }

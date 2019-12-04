@@ -1,7 +1,7 @@
 package employees;
 
-import hibernate.EmployeeDao;
 import hibernate.Employees;
+import hibernate.HibernateDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,8 +16,8 @@ public class EmpController {
     private List<Employees> list;
 
     public EmpController() {
-        EmployeeDao employeeDao = new EmployeeDao();
-        list = employeeDao.getEmployees();
+        HibernateDao hibernateDao = new HibernateDao();
+        list = hibernateDao.getEmployees();
     }
 
     @RequestMapping("/empform")
