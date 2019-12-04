@@ -7,10 +7,12 @@ hibernate\HibernateConfig.class
 scope\ScopeExample.class
 employees\EmpController.class
 hibernate\Phones.class
+hibernate\HibernateEntity.class
 hibernate\MainHibernate.class
 database\TransactionsSQL.class
 database\SQLConnection.class
 employees\Emp.class
 database\CRUDStatementSQL.class
 scope\MainScope.class
+hibernate\HibernateDao.class
 mail\SendEmail$1.class

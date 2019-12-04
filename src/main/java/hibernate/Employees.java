@@ -10,7 +10,7 @@ import java.util.Date;
 @Entity
 @Table(name = "Employees")
 @ToString
-public class Employees {
+public class Employees implements HibernateEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

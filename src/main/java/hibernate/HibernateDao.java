@@ -7,7 +7,7 @@ import java.util.List;
 
 public class HibernateDao {
 
-    public void saveEmployee(HibernateEntity hibernateEntity) {
+    public void saveHibernateEntity(HibernateEntity hibernateEntity) {
         Transaction transaction = null;
         try (Session session = HibernateConfig.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
@@ -21,7 +21,7 @@ public class HibernateDao {
         }
     }
 
-    public void updateEmployees(HibernateEntity hibernateEntity) {
+    public void updateHibernateEntity(HibernateEntity hibernateEntity) {
         Transaction transaction = null;
         try (Session session = HibernateConfig.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
@@ -35,7 +35,7 @@ public class HibernateDao {
         }
     }
 
-    public void deleteEmployees(HibernateEntity hibernateEntity) {
+    public void deleteHibernateEntity(HibernateEntity hibernateEntity) {
         Transaction transaction = null;
         try (Session session = HibernateConfig.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();

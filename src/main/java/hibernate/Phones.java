@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Table(name = "Phones")
 @ToString
 @RequiredArgsConstructor
-public class Phones {
+public class Phones implements HibernateEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46ca0b2d-2c16-4f88-a040-516fafe7e385" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/HibernateDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/HibernateEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/employees/EmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/employees/EmpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/EmployeeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Employees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/Employees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/HibernateDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/HibernateDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/PhoneDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/PhoneDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Phones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/Phones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/viewemp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/viewemp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/employees/EmpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/employees/EmpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/Employees.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/Employees.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/Phones.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/Phones.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/empform_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/empform_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/viewemp_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/viewemp_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/viewemp_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/viewemp_jsp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +55,13 @@
         <item name="Moja_Baza@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="Moja_Baza: database" type="ccb7ac2a:MsImplModel$Database" />
         <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Moja_Baza@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="Moja_Baza: database" type="ccb7ac2a:MsImplModel$Database" />
+        <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
+        <item name="Employees: table" type="63ab2ba1:MsImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -89,7 +109,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/database" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spirngEmployees+/spring_employees_with_hibernate" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -134,7 +154,7 @@
       <module name="springEmployees" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hibernate.*" />
+          <option name="PATTERN" value="hibernate.Employees" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -270,7 +290,7 @@
       <workItem from="1575316306944" duration="47000" />
       <workItem from="1575316415190" duration="669000" />
       <workItem from="1575317697176" duration="1906000" />
-      <workItem from="1575390933857" duration="8285000" />
+      <workItem from="1575390933857" duration="14176000" />
     </task>
     <servers />
   </component>
@@ -302,30 +322,34 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="677" y="197" key="#MainHibernate/0.0.1920.1080@0.0.1920.1080" timestamp="1575395906443" />
-    <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575316558665">
+    <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575470555132">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575316558665" />
-    <state x="761" y="361" key="FileChooserDialogImpl" timestamp="1575318223884">
+    <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575470555132" />
+    <state x="546" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575472534729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="761" y="361" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575318223884" />
-    <state width="1877" height="507" key="GridCell.Tab.0.bottom" timestamp="1575395966296">
+    <state x="546" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575472534729" />
+    <state x="761" y="361" key="FileChooserDialogImpl" timestamp="1575469702093">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="507" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575395966296" />
-    <state width="1877" height="507" key="GridCell.Tab.0.center" timestamp="1575395966295">
+    <state x="761" y="361" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575469702093" />
+    <state width="1877" height="354" key="GridCell.Tab.0.bottom" timestamp="1575472588933">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="507" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575395966295" />
-    <state width="1877" height="507" key="GridCell.Tab.0.left" timestamp="1575395966295">
+    <state width="1877" height="354" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575472588933" />
+    <state width="1877" height="354" key="GridCell.Tab.0.center" timestamp="1575472588933">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="507" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575395966295" />
-    <state width="1877" height="507" key="GridCell.Tab.0.right" timestamp="1575395966295">
+    <state width="1877" height="354" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575472588933" />
+    <state width="1877" height="354" key="GridCell.Tab.0.left" timestamp="1575472588933">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="507" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575395966295" />
+    <state width="1877" height="354" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575472588933" />
+    <state width="1877" height="354" key="GridCell.Tab.0.right" timestamp="1575472588933">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="354" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575472588933" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1575316491016">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

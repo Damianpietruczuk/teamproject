@@ -13,9 +13,9 @@
     <c:forEach var="emp" items="${list}">
         <tr>
             <td>${emp.id}</td>
-            <td>${emp.lastName}</td>
             <td>${emp.firstName}</td>
             <td>${emp.salary}</td>
+            <td>${emp.lastName}</td>
             <td>
                 <form:form method="post" action="delete">
                     <input type="hidden" id="id" name="id" value="${emp.id}"/>
