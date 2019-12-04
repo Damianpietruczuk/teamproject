@@ -10,7 +10,7 @@ public class SQLConnection {
     public Connection connectionToSQLServer() {
 
        // String url = "jdbc:sqlserver://DESKTOP-IURN3NH\\SQLEXPRESS;databaseName=CONNECTIS;integratedSecurity=true;";
-        String url = "jdbc:sqlserver://localhost\\SQLEXPRESS;databaseName=CONNECTIS;integratedSecurity=true;";
+        String url = "jdbc:sqlserver://localhost\\SQLEXPRESS;databaseName=Moja_Baza;integratedSecurity=true;";
 
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

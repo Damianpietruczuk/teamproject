@@ -10,7 +10,7 @@ public class MainHibernate {
         employeeDao.saveEmployee(employee);
         List<Employees> employeesList = employeeDao.getEmployees();
 
-        Employees employeeToUpdate = employeesList.get(35);
+        Employees employeeToUpdate = employeesList.get(0);
         employeeToUpdate.setSalary(9999);
 
         employeeDao.updateEmployees(employeeToUpdate);

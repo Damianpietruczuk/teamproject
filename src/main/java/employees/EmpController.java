@@ -18,6 +18,8 @@ public class EmpController {
     public EmpController() {
         EmployeeDao employeeDao = new EmployeeDao();
         list = employeeDao.getEmployees();
+      /*  list = new ArrayList<>();
+        list.add(new Employees("Test", "Test", "Test", "Test", 1, 1 , new Date(), 1));*/
     }
 
     @RequestMapping("/empform")

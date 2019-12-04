@@ -1,9 +1,7 @@
 package database;
 
 import java.sql.Connection;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Main {
@@ -24,12 +22,14 @@ public class Main {
         Connection connection = new SQLConnection().getConnection();
         CRUDStatementSQL crudStatementSQL = new CRUDStatementSQL(connection);
 
-        String tableName = "Employees";
+        //W BAZIE DANYCH NIE MASZ TABEL EMPLOYEES ANI ŻADNEJ INNEJ
+
+      /*  String tableName = "Employees";
         String insertQuery = "Insert INTO Employees (LastName, FirstName, Address, City, Salary, Age, StartJobDate, Benefit) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         String updateQuery = "UPDATE Employees SET LastName=?, FirstName=?, Address=?, City=?, Salary=?, Age=?, StartJobDate=?, Benefit=? WHERE ID=?";
-
+*/
    //     crudStatementSQL.selectSQLbyJDBC(tableName);
-
+/*
         List<String> columnNames = new ArrayList<>();
         columnNames.add("FirstName");
         columnNames.add("LastName");
@@ -37,7 +37,7 @@ public class Main {
       //  crudStatementSQL.selectSQLbyJDBC(columnNames, tableName);
 
 
-        TransactionsSQL.transactions(connection, crudStatementSQL.insertSQLbyJDBC(insertQuery));
+        TransactionsSQL.transactions(connection, crudStatementSQL.insertSQLbyJDBC(insertQuery));*/
      //   TransactionsSQL.transactions(connection, crudStatementSQL.updateSQLbyJDBC(updateQuery));
     //    TransactionsSQL.transactions(connection,  crudStatementSQL.deleteSQLbyID(8));
 
@@ -48,7 +48,7 @@ public class Main {
         updateValues.put("Age","15");
 
 
-        TransactionsSQL.transactions(connection, crudStatementSQL.updateSQLbyJDBC(updateValues, tableName, "where LastName = 'koro'"));
+       // TransactionsSQL.transactions(connection, crudStatementSQL.updateSQLbyJDBC(updateValues, tableName, "where LastName = 'koro'"));
         //TransactionsSQL.transactions(connection, crudStatementSQL.updateSQLbyJDBC(updateValues, tableName, "where LastName = 'asd' or 1 = 1"));
 
        //   TransactionsSQL.transactions(connection, crudStatementSQL.deleteSQLbyID(tableName, "id","2"));
