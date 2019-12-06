@@ -31,6 +31,8 @@ public class EmpController {
             System.out.println("New emp");
             employees.setId(list.size()+1);
             list.add(employees);
+            HibernateDao hibernateDao = new HibernateDao();
+            hibernateDao.saveHibernateEntity(employees);
         } else {
             Employees emp1 = getEmployeesById(employees.getId());
            // emp1.setDesignation(employees.getDesignation());
