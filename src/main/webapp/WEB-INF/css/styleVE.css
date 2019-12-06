@@ -1,0 +1,50 @@
+h1 {
+    font-family: "Myanmar Text";
+    background-color: lightskyblue;
+    font-size: 60px;
+    color: white;
+    text-align-all: center;
+    padding-top: 1.75%;
+    border-radius: 50px;
+    border: 4.5px solid dodgerblue;
+}
+
+
+body {
+    text-align: center;
+}
+
+th, td {
+    text-align: center;
+    border-radius: 20px;
+    border: 3px solid dodgerblue;
+}
+
+table {
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    font-size: 24px;
+    font-family: Impact;
+    letter-spacing: 3px;
+    font-weight: normal;
+}
+
+input {
+    margin-top: 22px
+}
+
+tr:nth-child(even) {background: lightskyblue}
+
+tr:nth-child(odd) {
+    background: lightskyblue;
+}
+
+tr:hover {
+    background-color: orange;
+}
+
+tr:first-child:hover{
+    background-color: lightskyblue;
+}
