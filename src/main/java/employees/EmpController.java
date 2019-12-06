@@ -45,7 +45,10 @@ public class EmpController {
 
     @RequestMapping(value="/delete", method=RequestMethod.POST)
     public ModelAndView delete(@RequestParam String id){
-        list.remove(getEmployeesById(Integer.parseInt(id)));
+        Employees employees=getEmployeesById(Integer.parseInt(id));
+        list.remove(employees);
+        HibernateDao hibernateDao = new HibernateDao();
+        hibernateDao.deleteHibernateEntity(employees);
         return new ModelAndView("redirect:/viewemp");
     }
 
