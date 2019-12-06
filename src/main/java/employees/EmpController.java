@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Controller
@@ -27,17 +28,20 @@ public class EmpController {
 
     @RequestMapping(value="/save", method = RequestMethod.POST)
     public ModelAndView save(@ModelAttribute("employees") Employees employees){
+        HibernateDao hibernateDao = new HibernateDao();
         if(employees.getId() < 1) {
             System.out.println("New emp");
+            System.out.println(employees.getId());
             employees.setId(list.size()+1);
             list.add(employees);
-            HibernateDao hibernateDao = new HibernateDao();
             hibernateDao.saveHibernateEntity(employees);
         } else {
             Employees emp1 = getEmployeesById(employees.getId());
-           // emp1.setDesignation(employees.getDesignation());
-         //   emp1.setName(employees.getName());
-         //   emp1.setSalary(employees.getSalary());
+            hibernateDao.updateHibernateEntity(employees);
+            System.out.println("*****"+employees.getFirstName()+" "+employees.getSalary()+" "+employees.getLastName());
+            list.remove(emp1);
+            list.add(employees);
+            list.sort(Comparator.comparing(Employees::getId));
         }
         System.out.println(employees.getFirstName()+" "+employees.getSalary()+" "+employees.getLastName());
         return new ModelAndView("redirect:/viewemp");
