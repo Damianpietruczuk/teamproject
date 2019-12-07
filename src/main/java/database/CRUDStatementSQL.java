@@ -96,6 +96,7 @@ public class CRUDStatementSQL {
         sb.append(tableName);
         sb.append(" SET ");
 
+
         int j = updateQuery.entrySet().size() - 1;
         int i = 0;
 

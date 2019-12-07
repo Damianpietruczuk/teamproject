@@ -1,8 +1,6 @@
 package hibernate;
 
-import lombok.Data;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -21,9 +19,17 @@ public class Printer implements HibernateEntity {
     @NonNull
     private String name;
 
-    @Column(name = "EmployeeID")
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "EMPLOYEE_ID", nullable = false, referencedColumnName="ID")
     @NonNull
-    private int EmployeeID;
+    private Employees employees;
+
+//    @ManyToMany(cascade = { CascadeType.ALL })
+//    @JoinTable(name = "Employees",
+//            joinColumns = { @JoinColumn(name = "Employee_ID") },
+//            inverseJoinColumns = { @JoinColumn(name = "ID") }
+//    )
+//    private List<Employees> employees;
 
     public Printer(){
     }

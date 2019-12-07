@@ -6,6 +6,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "Employees")
@@ -49,6 +50,18 @@ public class Employees implements HibernateEntity {
     @Column(name = "Benefit")
     @Getter @Setter
     private int benefit;
+
+    @OneToMany(mappedBy = "employees", orphanRemoval = true, fetch = FetchType.EAGER)
+    @ToString.Exclude
+    private Set<Phones> phones;
+
+    @OneToMany(mappedBy = "employees", orphanRemoval = true, fetch = FetchType.EAGER)
+    @ToString.Exclude
+    private Set<Printer> printers;
+
+//    @ManyToMany(mappedBy = "employees")
+//    private Set<Printer> printers;
+
 
 
     public Employees(){

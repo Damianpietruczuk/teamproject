@@ -17,17 +17,23 @@ public class Phones implements HibernateEntity {
     @Setter
     private int id;
 
-    @Column(name = "name")
+    @Column(name = "Name")
     @Getter
     @Setter
     @NonNull
     private String name;
 
-    @Column(name = "model")
+    @Column(name = "Model")
     @Getter
     @Setter
     @NonNull
     private String model;
+
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "EMPLOYEE_ID", nullable = false, referencedColumnName="ID")
+    @Getter @Setter
+    @NonNull
+    private Employees employees;
 
     public Phones(){
 

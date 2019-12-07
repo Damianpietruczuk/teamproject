@@ -22,11 +22,6 @@
             <td>Salary :</td>
             <td><form:input path="salary" /></td>
         </tr>
-
-        <tr>
-            <td> </td>
-            <td><input type="submit" value="Save" /></td>
-        </tr>
             <td>Address :</td>
             <td><form:input path="address" /></td>
         </tr>

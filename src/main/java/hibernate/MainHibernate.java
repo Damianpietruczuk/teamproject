@@ -1,7 +1,6 @@
 package hibernate;
 
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class MainHibernate {
     public static void main(String[] args) {
@@ -10,15 +9,19 @@ public class MainHibernate {
         hibernateDao.saveHibernateEntity(employee);
         List<Employees> employeesList = hibernateDao.getEmployees();
 
+//        Set<Employees> employeesSet = new HashSet<>();
+//        employeesSet.add(employeesList.get(0));
+//        employeesSet.add(employeesList.get(1));
+
         Employees employeeToUpdate = employeesList.get(0);
         employeeToUpdate.setSalary(9999);
 
         hibernateDao.updateHibernateEntity(employeeToUpdate);
         employeesList.forEach(System.out::println);
 
-        Phones phones = new Phones("Sony", "Xperia 10");
+        Phones phones = new Phones("Sony", "Xperia 10", employee);
 
-        Printer printer = new Printer("Hp", 2);
+        Printer printer = new Printer("Hp", employee);
 
         hibernateDao.saveHibernateEntity(phones);
         hibernateDao.getPhones().forEach(System.out::println);
