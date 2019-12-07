@@ -30,6 +30,7 @@ public class HibernateConfig {
 
                 configuration.addAnnotatedClass(Employees.class);
                 configuration.addAnnotatedClass(Phones.class);
+                configuration.addAnnotatedClass(Printer.class);
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
                 sessionFactory = configuration.buildSessionFactory(serviceRegistry);

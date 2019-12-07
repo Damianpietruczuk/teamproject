@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46ca0b2d-2c16-4f88-a040-516fafe7e385" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/Printer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/employees/EmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/employees/EmpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/EmployeeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/HibernateDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/HibernateDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/MainHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/MainHibernate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/PhoneDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/empform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/empform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/HibernateConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/HibernateConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate/MainHibernate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/MainHibernate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +64,7 @@
         <option value="CSS File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -123,7 +127,7 @@
       <recent name="C:\Users\Jakub\Desktop\ideaproject cz 2\mywebapp\src\main\webapp" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.mywebapp [tomcat7:run]">
+  <component name="RunManager" selected="Application.MainHibernate">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="database.Main" />
       <module name="springEmployees" />
@@ -252,6 +256,11 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:Moja_Baza@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:Moja_Baza@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@3d75a1ae" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
             </expand>
             <select />
           </treeState>
@@ -278,7 +287,8 @@
       <workItem from="1575316306944" duration="47000" />
       <workItem from="1575316415190" duration="669000" />
       <workItem from="1575317697176" duration="1906000" />
-      <workItem from="1575390933857" duration="15161000" />
+      <workItem from="1575390933857" duration="21282000" />
+      <workItem from="1575710995893" duration="579000" />
     </task>
     <servers />
   </component>
@@ -326,26 +336,26 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575479056659" />
-    <state x="761" y="361" key="FileChooserDialogImpl" timestamp="1575469702093">
+    <state x="761" y="361" key="FileChooserDialogImpl" timestamp="1575616460406">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="761" y="361" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575469702093" />
-    <state width="1877" height="302" key="GridCell.Tab.0.bottom" timestamp="1575479192198">
+    <state x="761" y="361" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575616460406" />
+    <state width="1877" height="251" key="GridCell.Tab.0.bottom" timestamp="1575616593339">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="302" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575479192198" />
-    <state width="1877" height="302" key="GridCell.Tab.0.center" timestamp="1575479192198">
+    <state width="1877" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575616593339" />
+    <state width="1877" height="251" key="GridCell.Tab.0.center" timestamp="1575616593339">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="302" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575479192198" />
-    <state width="1877" height="302" key="GridCell.Tab.0.left" timestamp="1575479192198">
+    <state width="1877" height="251" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575616593339" />
+    <state width="1877" height="251" key="GridCell.Tab.0.left" timestamp="1575616593339">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="302" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575479192198" />
-    <state width="1877" height="302" key="GridCell.Tab.0.right" timestamp="1575479192198">
+    <state width="1877" height="251" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575616593339" />
+    <state width="1877" height="251" key="GridCell.Tab.0.right" timestamp="1575616593339">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="302" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575479192198" />
+    <state width="1877" height="251" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575616593339" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1575316491016">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

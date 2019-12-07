@@ -55,9 +55,15 @@ public class HibernateDao {
         }
     }
 
-    public List<Employees> getPhones() {
+    public List<Phones> getPhones() {
         try (Session session = HibernateConfig.getSessionFactory().openSession()) {
-            return session.createQuery("from Phones", Employees.class).list();
+            return session.createQuery("from Phones", Phones.class).list();
+        }
+    }
+
+    public List<Printer> getPrinters() {
+        try (Session session = HibernateConfig.getSessionFactory().openSession()) {
+            return session.createQuery("from Printer", Printer.class).list();
         }
     }
 }

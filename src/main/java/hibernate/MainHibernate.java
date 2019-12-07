@@ -18,7 +18,11 @@ public class MainHibernate {
 
         Phones phones = new Phones("Sony", "Xperia 10");
 
+        Printer printer = new Printer("Hp", 2);
+
         hibernateDao.saveHibernateEntity(phones);
         hibernateDao.getPhones().forEach(System.out::println);
+        hibernateDao.saveHibernateEntity(printer);
+        hibernateDao.getPrinters().forEach(System.out::println);
     }
 }
