@@ -10,7 +10,7 @@
     <table cellspacing="5" cellpadding="5">
         <form:hidden path="id" />
         <tr>
-            <td>Name : </td>
+            <td>First Name : </td>
             <td><form:input path="firstName" /></td>
         </tr>
         <tr>
