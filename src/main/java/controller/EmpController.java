@@ -2,6 +2,7 @@ package controller;
 
 import hibernate.Employees;
 import hibernate.HibernateDao;
+import hibernate.MainHibernate;
 import mail.SendEmail;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -26,6 +27,15 @@ public class EmpController {
     @RequestMapping("/empform")
     public ModelAndView showform(){
         return new ModelAndView("empform","command", new Employees());
+    }
+
+    @RequestMapping(value="/db")
+    public ModelAndView initiateDB(){
+//        list.add(Arrays.asList())
+        MainHibernate.main();
+        HibernateDao hibernateDao = new HibernateDao();
+        list = hibernateDao.getEmployees();
+        return new ModelAndView("redirect:/viewemp");
     }
 
     @RequestMapping(value="/save", method = RequestMethod.POST)

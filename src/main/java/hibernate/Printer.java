@@ -3,6 +3,7 @@ package hibernate;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -29,6 +30,7 @@ public class Printer implements HibernateEntity {
 //    private Employees employees;
 
     @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
+    @ToString.Exclude
     @JoinTable(name = "Employees_Printers",
             joinColumns = { @JoinColumn(name = "Printer_ID") },
             inverseJoinColumns = { @JoinColumn(name = "Employee_ID") }
@@ -41,5 +43,8 @@ public class Printer implements HibernateEntity {
     public Printer(String name,Set<Employees> employees){
         this.name=name;
         this.employees=employees;
+    }
+    @Override public String toString() {
+        return this.name;
     }
 }

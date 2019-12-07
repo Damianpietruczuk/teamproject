@@ -30,6 +30,7 @@ public class PrinterController{
         @RequestMapping(value="/savePrinter", method = RequestMethod.POST)
         public ModelAndView save(@ModelAttribute("printer") Printer printer){
             HibernateDao hibernateDao = new HibernateDao();
+
             if(printer.getId() < 1) {
                 System.out.println("New printer");
                 System.out.println(printer.getId());
@@ -58,7 +59,7 @@ public class PrinterController{
     @RequestMapping("/show")
     public ModelAndView show(@RequestParam String id){
             Printer printer = getPrinterById(Integer.parseInt(id));
-        return new ModelAndView("showconnections","command", printer);
+        return new ModelAndView("fulldataPrinter","command", printer);
     }
 
         @RequestMapping(value="/editPrinter", method=RequestMethod.POST)
@@ -69,6 +70,8 @@ public class PrinterController{
 
         @RequestMapping("/viewprinters")
         public ModelAndView viewprinter(){
+            HibernateDao hibernateDao = new HibernateDao();
+            list = hibernateDao.getPrinters();
             return new ModelAndView("viewprinters","list", list);
         }
 

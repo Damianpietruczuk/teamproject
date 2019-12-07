@@ -43,7 +43,11 @@
         </tr>
         <tr>
             <td>StartJobDate :</td>
-            <td></td>
+            <td><form:input path="startJobDate" readonly="true"/></td>
+        </tr>
+        <tr>
+            <td>Printers :</td>
+            <td><form:input path="printers" readonly="true"/></td>
         </tr>
         <tr>
             <td colspan="2" width="100%"><a href="viewemp">Back to view employees</a></td>

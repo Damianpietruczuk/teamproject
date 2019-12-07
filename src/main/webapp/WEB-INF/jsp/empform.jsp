@@ -44,10 +44,14 @@
             <td>StartJobDate :</td>
             <td></td>
         </tr>
+
         <tr>
             <td colspan="2" width="100%"><input type="submit" value="Save" /></td>
         </tr>
     </table>
+</form:form>
+<form:form method="get" action="db">
+    <input type="submit" value="db"/>
 </form:form>
 </html>
 

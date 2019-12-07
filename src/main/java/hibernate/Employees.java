@@ -75,15 +75,19 @@ public class Employees implements HibernateEntity {
 
     }
 
-    public Employees(String lastName, String firstName, String address, String city, int salary, int age, Date startJobDate, int benefit, String email) {
+    public Employees(String lastName, String firstName, String address, String city, int salary, int age, int benefit, String email) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.address = address;
         this.city = city;
         this.salary = salary;
         this.age = age;
-        this.startJobDate = startJobDate;
+        this.startJobDate = new Date();
         this.benefit = benefit;
         this.email=email;
+    }
+
+    @Override public String toString() {
+        return this.firstName +" "+this.lastName;
     }
 }
