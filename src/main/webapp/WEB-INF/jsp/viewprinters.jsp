@@ -34,7 +34,7 @@
             </td>
         </tr>
     </c:forEach>
-
+    <a href="/">Main menu</a>
 </table>
 </body>
 </html>

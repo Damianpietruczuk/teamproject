@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class SendEmail {
 
-    public static void main(String[] args) {
+    public static void sendMessage(String action,String initialInfo,String finalInfo,String email) {
 
         final String username = "test.kurs.123123@gmail.com";
         final String password = "Test1234@";
@@ -31,11 +31,11 @@ public class SendEmail {
             message.setFrom(new InternetAddress("from@gmail.com"));
             message.setRecipients(
                     Message.RecipientType.TO,
-                    InternetAddress.parse("crimson.kuba@gmail.com")
+                    InternetAddress.parse(email)
             );
-            message.setSubject("Testing");
+            message.setSubject(action);
             message.setText("Witam,"
-                    + "\n\n Tutaj mail testowy");
+                    + "\n\n"+initialInfo+"\n\n"+finalInfo);
 
             Transport.send(message);
 
@@ -46,7 +46,7 @@ public class SendEmail {
     }
 
 
-//    public static void prepareMessage(Session session, String action String initialValue, String finalValue, String email){
+//    public void prepareMessage(Session session, String action String initialValue, String finalValue, String email){
 //
 //
 //        try {

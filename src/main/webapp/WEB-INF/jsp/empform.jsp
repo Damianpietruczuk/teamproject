@@ -40,6 +40,10 @@
             <td>Email :</td>
             <td><form:input path="email" /></td>
         </tr>
+<%--        <tr>--%>
+<%--            <td>StartJob :</td>--%>
+<%--            <td><form:input path="startJobDate" /></td>--%>
+<%--        </tr>--%>
         <tr>
             <td colspan="2" width="100%"><input type="submit" value="Save" /></td>
         </tr>

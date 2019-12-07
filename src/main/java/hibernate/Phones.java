@@ -12,7 +12,7 @@ public class Phones implements HibernateEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
+    @Column(name = "Phone_ID")
     @Getter
     @Setter
     private int id;
@@ -30,9 +30,10 @@ public class Phones implements HibernateEntity {
     private String model;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "EMPLOYEE_ID", nullable = false, referencedColumnName="ID")
+    @JoinColumn(name = "EMPLOYEE_ID", nullable = false, referencedColumnName="Employee_ID")
     @Getter @Setter
     @NonNull
+    @ToString.Exclude
     private Employees employees;
 
     public Phones(){

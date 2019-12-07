@@ -6,6 +6,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -15,7 +16,7 @@ public class Employees implements HibernateEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
+    @Column(name = "Employee_ID")
     @Getter @Setter
     private int id;
 
@@ -59,12 +60,14 @@ public class Employees implements HibernateEntity {
     @ToString.Exclude
     private Set<Phones> phones;
 
-    @OneToMany(mappedBy = "employees", orphanRemoval = true, fetch = FetchType.EAGER)
-    @ToString.Exclude
-    private Set<Printer> printers;
-
-//    @ManyToMany(mappedBy = "employees")
+//    @OneToMany(mappedBy = "employees", orphanRemoval = true, fetch = FetchType.EAGER)
+//    @ToString.Exclude
 //    private Set<Printer> printers;
+
+    @ManyToMany(mappedBy = "employees", fetch = FetchType.EAGER)
+    @Getter @Setter
+    @ToString.Exclude
+    private Set<Printer> printers = new HashSet<>();
 
 
 
@@ -72,7 +75,7 @@ public class Employees implements HibernateEntity {
 
     }
 
-    public Employees(String lastName, String firstName, String address, String city, int salary, int age, Date startJobDate, int benefit) {
+    public Employees(String lastName, String firstName, String address, String city, int salary, int age, Date startJobDate, int benefit, String email) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.address = address;
@@ -81,5 +84,6 @@ public class Employees implements HibernateEntity {
         this.age = age;
         this.startJobDate = startJobDate;
         this.benefit = benefit;
+        this.email=email;
     }
 }

@@ -2,6 +2,7 @@ package controller;
 
 import hibernate.Employees;
 import hibernate.HibernateDao;
+import mail.SendEmail;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -28,6 +30,7 @@ public class EmpController {
 
     @RequestMapping(value="/save", method = RequestMethod.POST)
     public ModelAndView save(@ModelAttribute("employees") Employees employees){
+        employees.setStartJobDate(new Date());
         HibernateDao hibernateDao = new HibernateDao();
         if(employees.getId() < 1) {
             System.out.println("New emp");
@@ -35,14 +38,17 @@ public class EmpController {
             employees.setId(list.size()+1);
             list.add(employees);
             hibernateDao.saveHibernateEntity(employees);
+            SendEmail.sendMessage("Saved", "", employees.toString(), employees.getEmail());
         } else {
             Employees emp1 = getEmployeesById(employees.getId());
             hibernateDao.updateHibernateEntity(employees);
+            SendEmail.sendMessage("Edited", emp1.toString(), employees.toString(), employees.getEmail());
             list.remove(emp1);
             list.add(employees);
             list.sort(Comparator.comparing(Employees::getId));
+
         }
-        //SendEmail.prepareMessage("Saved", employees.toString(), employees.toString(), employees.getEmail());
+
         System.out.println(employees.getFirstName()+" "+employees.getSalary()+" "+employees.getLastName());
         return new ModelAndView("redirect:/viewemp");
     }
@@ -50,7 +56,7 @@ public class EmpController {
     @RequestMapping(value="/delete", method=RequestMethod.POST)
     public ModelAndView delete(@RequestParam String id){
         Employees employees=getEmployeesById(Integer.parseInt(id));
-        //SendEmail.prepareMessage("Saved", employees.toString(), employees.toString(), employees.getEmail());
+        SendEmail.sendMessage("Deleted", employees.toString(), "", employees.getEmail());
         list.remove(employees);
         HibernateDao hibernateDao = new HibernateDao();
         hibernateDao.deleteHibernateEntity(employees);
