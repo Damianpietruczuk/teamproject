@@ -63,6 +63,12 @@ public class EmpController {
         return new ModelAndView("empform","command", employees);
     }
 
+    @RequestMapping(value = "/fulldata", method = RequestMethod.POST)
+    public ModelAndView fulldata(@RequestParam String id){
+        Employees employees = getEmployeesById(Integer.parseInt(id));
+        return new ModelAndView("fulldata","command",employees);
+    }
+
     @RequestMapping(value="/test", method=RequestMethod.POST)
     public ModelAndView test(){
         System.out.println("Test");
