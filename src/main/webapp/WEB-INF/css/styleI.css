@@ -1,0 +1,43 @@
+body{
+    font-family: "Myanmar Text";
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    transform: translate(0, -50%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2, a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: center;
+
+    padding-bottom: 1%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3.5%;
+
+    font-size: 150%;
+    letter-spacing: 3px;
+
+    background: lightskyblue;
+    border-radius: 25px;
+    border: 3px solid dodgerblue;
+}
+
+h2 {
+    padding-top: 5%;
+    padding-bottom: 0.5%;
+}
+
+a:hover {
+    background-color: orange;
+}
+
+h2 {
+    margin-bottom: 13%;
+}
