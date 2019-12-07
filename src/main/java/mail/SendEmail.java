@@ -45,4 +45,28 @@ public class SendEmail {
         }
     }
 
+
+//    public static void prepareMessage(Session session, String action String initialValue, String finalValue, String email){
+//
+//
+//        try {
+//            Message message1 = new MimeMessage(session);
+//            message1.setFrom(new InternetAddress("from@gmail.com"));
+//            message1.setRecipients(
+//                    Message.RecipientType.TO,
+//                    InternetAddress.parse("dampiet34@wp.pl")
+//            );
+//            message1.setSubject("Testing");
+//            message1.setText("Witam,"
+//                    + "\n\n Tutaj mail testowy");
+//            message1.setText("Witam");
+//
+//            Transport.send(message1);
+//
+//            System.out.println("Sukces");
+//        } catch (MessagingException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
 }

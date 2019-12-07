@@ -11,6 +11,8 @@
     Hi!
 </h2>
 <a width="100%" href="empform">Add Employee</a> <br/>
-<a href="viewemp">View Employees</a>
+<a href="viewemp">View Employees</a> <br/>
+<a href="printerform">Add Printer</a> <br/>
+<a href="viewprinters">View Printers</a>
 </body>
 </html>

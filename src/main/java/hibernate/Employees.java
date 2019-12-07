@@ -51,6 +51,10 @@ public class Employees implements HibernateEntity {
     @Getter @Setter
     private int benefit;
 
+    @Column(name = "Email")
+    @Getter @Setter
+    private String email;
+
     @OneToMany(mappedBy = "employees", orphanRemoval = true, fetch = FetchType.EAGER)
     @ToString.Exclude
     private Set<Phones> phones;

@@ -1,4 +1,4 @@
-package employees;
+package controller;
 
 import hibernate.Employees;
 import hibernate.HibernateDao;
@@ -42,6 +42,7 @@ public class EmpController {
             list.add(employees);
             list.sort(Comparator.comparing(Employees::getId));
         }
+        //SendEmail.prepareMessage("Saved", employees.toString(), employees.toString(), employees.getEmail());
         System.out.println(employees.getFirstName()+" "+employees.getSalary()+" "+employees.getLastName());
         return new ModelAndView("redirect:/viewemp");
     }
@@ -49,6 +50,7 @@ public class EmpController {
     @RequestMapping(value="/delete", method=RequestMethod.POST)
     public ModelAndView delete(@RequestParam String id){
         Employees employees=getEmployeesById(Integer.parseInt(id));
+        //SendEmail.prepareMessage("Saved", employees.toString(), employees.toString(), employees.getEmail());
         list.remove(employees);
         HibernateDao hibernateDao = new HibernateDao();
         hibernateDao.deleteHibernateEntity(employees);

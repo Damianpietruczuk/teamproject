@@ -1,6 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<style><%@include file="/WEB-INF/css/styleI.css"%></style>
 <style><%@include file="/WEB-INF/css/styleEF.css"%></style>
 <html lang="pl-PL">
 <head>
@@ -36,6 +35,10 @@
         <tr>
             <td>Benefit :</td>
             <td><form:input path="benefit" /></td>
+        </tr>
+        <tr>
+            <td>Email :</td>
+            <td><form:input path="email" /></td>
         </tr>
         <tr>
             <td colspan="2" width="100%"><input type="submit" value="Save" /></td>
