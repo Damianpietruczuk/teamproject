@@ -16,6 +16,7 @@ h1 {
 }
 
 table {
+    margin-top: 8%;
     position: absolute;
     top: 50%;
     left: 40%;
