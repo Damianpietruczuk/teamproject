@@ -10,7 +10,7 @@
 <h2>
     Hi!
 </h2>
-<a width="100%" href="empform">Add Employee</a> <br/>
+<a width="100%" href="empform">Add Employee</a>
 <a href="viewemp">View Employees</a>
 </body>
 </html>
