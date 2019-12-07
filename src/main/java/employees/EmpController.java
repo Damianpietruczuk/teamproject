@@ -38,7 +38,6 @@ public class EmpController {
         } else {
             Employees emp1 = getEmployeesById(employees.getId());
             hibernateDao.updateHibernateEntity(employees);
-            System.out.println("*****"+employees.getFirstName()+" "+employees.getSalary()+" "+employees.getLastName());
             list.remove(emp1);
             list.add(employees);
             list.sort(Comparator.comparing(Employees::getId));

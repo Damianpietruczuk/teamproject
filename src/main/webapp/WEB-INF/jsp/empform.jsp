@@ -14,14 +14,33 @@
             <td><form:input path="firstName" /></td>
         </tr>
         <tr>
+            <td>Last Name :</td>
+            <td><form:input path="lastName" /></td>
+        </tr>
+        <tr>
             <td>Salary :</td>
             <td><form:input path="salary" /></td>
         </tr>
         <tr>
-            <td>Designation :</td>
-            <td><form:input path="lastName" /></td>
+            <td>Address :</td>
+            <td><form:input path="address" /></td>
         </tr>
-
+        <tr>
+            <td>City :</td>
+            <td><form:input path="city" /></td>
+        </tr>
+        <tr>
+            <td>Age :</td>
+            <td><form:input path="age" /></td>
+        </tr>
+        <tr>
+            <td>Benefit :</td>
+            <td><form:input path="benefit" /></td>
+        </tr>
+<%--        <tr>--%>
+<%--            <td>StartJobDate :</td>--%>
+<%--            <td><form:input path="startJobDate" /></td>--%>
+<%--        </tr>--%>
         <tr>
             <td colspan="2" width="100%"><input type="submit" value="Save" /></td>
         </tr>

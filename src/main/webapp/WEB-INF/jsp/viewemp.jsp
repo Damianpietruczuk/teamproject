@@ -14,19 +14,19 @@
         <th>Salary</th>
         <th>Action</th>
     </tr>
-    <c:forEach var="emp" items="${list}">
+    <c:forEach var="employees" items="${list}">
         <tr>
-            <td>${emp.id}</td>
-            <td>${emp.firstName} ${emp.lastName}</td>
-            <td>${emp.salary}</td>
+            <td>${employees.id}</td>
+            <td>${employees.firstName} ${employees.lastName}</td>
+            <td>${employees.salary}</td>
 
             <td>
                 <form:form method="post" action="delete">
-                    <input type="hidden" id="id" name="id" value="${emp.id}"/>
+                    <input type="hidden" id="id" name="id" value="${employees.id}"/>
                     <input type="submit" class="button" name="Delete" value="delete"/>
                 </form:form>
                 <form:form method="post" action="edit">
-                    <input type="hidden" id="id" name="id" value="${emp.id}"/>
+                    <input type="hidden" id="id" name="id" value="${employees.id}"/>
                     <input type="submit" class="button" name="Edit" value="edit"/>
                 </form:form>
             </td>
