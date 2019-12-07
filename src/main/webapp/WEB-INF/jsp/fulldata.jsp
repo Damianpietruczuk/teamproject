@@ -37,10 +37,14 @@
             <td>Benefit :</td>
             <td><form:input path="benefit" readonly="true"/></td>
         </tr>
-            <%--        <tr>--%>
-            <%--            <td>StartJobDate :</td>--%>
-            <%--            <td><form:input path="startJobDate" /></td>--%>
-            <%--        </tr>--%>
+        <tr>
+            <td>Email :</td>
+            <td><form:input path="email" readonly="true"/></td>
+        </tr>
+        <tr>
+            <td>StartJobDate :</td>
+            <td></td>
+        </tr>
         <tr>
             <td colspan="2" width="100%"><a href="viewemp">Back to view employees</a></td>
         </tr>

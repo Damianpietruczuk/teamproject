@@ -38,7 +38,11 @@
         </tr>
         <tr>
             <td>Email :</td>
-            <td><form:input path="email" /></td>
+            <td><form:input type="email" path="email"/></td>
+        </tr>
+        <tr>
+            <td>StartJobDate :</td>
+            <td></td>
         </tr>
         <tr>
             <td colspan="2" width="100%"><input type="submit" value="Save" /></td>
