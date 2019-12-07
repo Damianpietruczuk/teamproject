@@ -29,6 +29,10 @@
                     <input type="hidden" id="id" name="id" value="${employees.id}"/>
                     <input type="submit" class="button" name="Edit" value="edit"/>
                 </form:form>
+                <form:form method="post" action="fulldata">
+                    <input type="hidden" id="id" name="id" value="${employees.id}"/>
+                    <input type="submit" class="button" name="Fulldata" value="fulldata"/>
+                </form:form>
             </td>
         </tr>
     </c:forEach>
