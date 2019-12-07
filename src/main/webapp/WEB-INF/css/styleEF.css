@@ -8,7 +8,8 @@ h1 {
     font-size: 60px;
     color: white;
     text-align-all: center;
-    padding-left: 32%;
+    display: flex;
+    justify-content: center;
     padding-top: 1.75%;
     border-radius: 50px;
     border: 4.5px solid dodgerblue;
@@ -54,4 +55,8 @@ input[type="submit"] {
     margin-bottom: 4px;
 }
 
+a{
+    display: flex;
+    justify-content: center;
+}
 
