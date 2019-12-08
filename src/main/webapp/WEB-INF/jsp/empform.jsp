@@ -41,17 +41,21 @@
             <td><form:input type="email" path="email"/></td>
         </tr>
         <tr>
-            <td>StartJobDate :</td>
-            <td></td>
+            <td>StartJobDate : dd/mm/yyyy</td>
+            <td><form:input path="startJobDate"/></td>
         </tr>
 
         <tr>
-            <td colspan="2" width="100%"><input type="submit" value="Save" /></td>
+            <td colspan="2" width="100%"><input type="submit" value="Save" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" width="100%"><form:form method="get" action="db">
+                <input type="submit" value="db"/>
+            </form:form></td>
         </tr>
     </table>
 </form:form>
-<form:form method="get" action="db">
-    <input type="submit" value="db"/>
-</form:form>
+
 </html>
 

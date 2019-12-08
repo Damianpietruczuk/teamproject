@@ -36,7 +36,7 @@
             </td>
         </tr>
     </c:forEach>
-    <a href="/">Main menu</a>
+
 
     <td colspan="4" width="100%"><span>
         <form:form method="post" action="test">
@@ -44,7 +44,9 @@
         </form:form>
         </span>
     </td>
-
+    <tr >
+    <td colspan="4" width="100%"><a href="/">Main menu</a></td>
+    </tr>
 </table>
 </body>
 </html>

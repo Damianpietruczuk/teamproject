@@ -4,13 +4,13 @@ import hibernate.Employees;
 import hibernate.HibernateDao;
 import hibernate.MainHibernate;
 import mail.SendEmail;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.text.SimpleDateFormat;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
@@ -22,6 +22,12 @@ public class EmpController {
     public EmpController() {
         HibernateDao hibernateDao = new HibernateDao();
         list = hibernateDao.getEmployees();
+    }
+
+    @InitBinder
+    public void initBinder(WebDataBinder binder){
+        binder.registerCustomEditor(       Date.class,
+                new CustomDateEditor(new SimpleDateFormat("dd/MM/yyyy"), true, 10));
     }
 
     @RequestMapping("/empform")
@@ -40,7 +46,6 @@ public class EmpController {
 
     @RequestMapping(value="/save", method = RequestMethod.POST)
     public ModelAndView save(@ModelAttribute("employees") Employees employees){
-        employees.setStartJobDate(new Date());
         HibernateDao hibernateDao = new HibernateDao();
         if(employees.getId() < 1) {
             System.out.println("New emp");
