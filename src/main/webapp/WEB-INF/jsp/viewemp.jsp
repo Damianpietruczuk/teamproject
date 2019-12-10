@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>View Employees List</h1>
-<table border="2" width="70%" cellspacing="10" cellpadding="10" >
+<table  width="70%" cellspacing="10" cellpadding="10" >
     <tr>
         <th>Id</th>
         <th>Name</th>
@@ -20,32 +20,29 @@
             <td>${employees.firstName} ${employees.lastName}</td>
             <td>${employees.salary}</td>
 
-            <td>
+            <td class="btnsInside">
                 <form:form method="post" action="delete">
                     <input type="hidden" id="id" name="id" value="${employees.id}"/>
-                    <input type="submit" class="button" name="Delete" value="delete"/>
+                    <input class="btnsToSeparate" type="submit" class="button" name="Delete" value="delete"/>
                 </form:form>
                 <form:form method="post" action="edit">
                     <input type="hidden" id="id" name="id" value="${employees.id}"/>
-                    <input type="submit" class="button" name="Edit" value="edit"/>
+                    <input class="btnsToSeparate" type="submit" class="button" name="Edit" value="edit"/>
                 </form:form>
                 <form:form method="post" action="fulldata">
                     <input type="hidden" id="id" name="id" value="${employees.id}"/>
-                    <input type="submit" class="button" name="Fulldata" value="fulldata"/>
+                    <input class="btnsToSeparate" type="submit" class="button" name="Fulldata" value="fulldata"/>
                 </form:form>
             </td>
         </tr>
     </c:forEach>
 
 
-    <td colspan="4" width="100%"><span>
-        <form:form method="post" action="test">
-            <input type="submit" class="button" name="test" value="test"/>
-        </form:form>
-        </span>
-    </td>
     <tr >
-    <td colspan="4" width="100%"><a href="/">Main menu</a></td>
+        <td colspan="3" width="100%"><a href="/">Main menu</a></td>
+        <td colspan="1" width="100%"><form:form method="post" action="test">
+            <input type="submit" class="button" name="test" value="test"/>
+        </form:form></td>
     </tr>
 </table>
 </body>

@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>View Printers List</h1>
-<table border="2" width="70%" cellspacing="10" cellpadding="10" >
+<table  width="70%" cellspacing="10" cellpadding="10" >
     <tr>
         <th>Id</th>
         <th>Name</th>
