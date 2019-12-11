@@ -2,9 +2,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <style><%@include file="/WEB-INF/css/styleVE.css"%></style>
 <html lang="pl-PL">
-<head>
-    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-</head>
 <body>
 <h1>View Printers List</h1>
 <table  width="70%" cellspacing="10" cellpadding="10" >

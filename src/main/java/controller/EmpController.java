@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
@@ -19,9 +20,17 @@ import java.util.List;
 public class EmpController {
     private List<Employees> list;
 
+    private HibernateDao hibernateDao;
+
     public EmpController() {
-        HibernateDao hibernateDao = new HibernateDao();
-        list = hibernateDao.getEmployees();
+        hibernateDao = new HibernateDao();
+        try {
+            list = hibernateDao.getEmployees();
+        } catch (NullPointerException ex) {
+            ex.getMessage();
+            list=new ArrayList<>();
+            list.add(new Employees());
+        }
     }
 
     @InitBinder
@@ -39,14 +48,12 @@ public class EmpController {
     public ModelAndView initiateDB(){
 //        list.add(Arrays.asList())
         MainHibernate.main();
-        HibernateDao hibernateDao = new HibernateDao();
         list = hibernateDao.getEmployees();
         return new ModelAndView("redirect:/viewemp");
     }
 
     @RequestMapping(value="/save", method = RequestMethod.POST)
     public ModelAndView save(@ModelAttribute("employees") Employees employees){
-        HibernateDao hibernateDao = new HibernateDao();
         if(employees.getId() < 1) {
             System.out.println("New emp");
             System.out.println(employees.getId());
@@ -73,7 +80,6 @@ public class EmpController {
         Employees employees=getEmployeesById(Integer.parseInt(id));
         SendEmail.sendMessage("Deleted", employees.toString(), "", employees.getEmail());
         list.remove(employees);
-        HibernateDao hibernateDao = new HibernateDao();
         hibernateDao.deleteHibernateEntity(employees);
         return new ModelAndView("redirect:/viewemp");
     }
