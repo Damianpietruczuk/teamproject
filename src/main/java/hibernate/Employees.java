@@ -3,6 +3,7 @@ package hibernate;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -13,6 +14,8 @@ import java.util.Set;
 @Table(name = "Employees")
 @ToString
 public class Employees implements HibernateEntity {
+
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,6 +47,8 @@ public class Employees implements HibernateEntity {
     @Getter @Setter
     private int age;
 
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @Temporal(TemporalType.DATE)
     @Column(name = "StartJobDate")
     @Getter @Setter
     private Date startJobDate;

@@ -1,50 +1,69 @@
 h1 {
     font-family: "Myanmar Text";
-    background-color: lightskyblue;
+
     font-size: 60px;
     color: white;
     text-align-all: center;
     padding-top: 1.75%;
-    border-radius: 50px;
-    border: 4.5px solid dodgerblue;
+
 }
 
 
 body {
     text-align: center;
+    background: rgb(169,165,237);
+    background: linear-gradient(72deg, rgba(169,165,237,1) 0%, rgba(50,50,195,1) 50%, rgba(45,181,209,1) 100%);
 }
 
 th, td {
+    color: white;
     text-align: center;
-    border-radius: 20px;
-    border: 3px solid dodgerblue;
+
+}
+
+td, th {
+    border-bottom: 3px solid white;
+    border-bottom-collapse: collapse;
 }
 
 table {
     position: center;
     margin-left: auto;
     margin-right: auto;
-    border: none;
     font-size: 24px;
-    font-family: Impact;
+    font-family: "Myanmar Text";
     letter-spacing: 3px;
     font-weight: normal;
+
 }
 
 input {
     margin-top: 22px
 }
 
-tr:nth-child(even) {background: lightskyblue}
+td[class="btnsInside"]{
+    display: flex;
+   justify-content: center;
 
-tr:nth-child(odd) {
-    background: lightskyblue;
 }
 
-tr:hover {
-    background-color: orange;
+input[class="btnsToSeparate"]{
+    width: 80%;
+    margin-right: 15px;
+    margin-left: 15px;
 }
+
+td:first-child{
+    font-weight: bold;
+}
+
 
 tr:first-child:hover{
-    background-color: lightskyblue;
+    color: white;
+}
+
+
+
+a {
+    color: white;
 }

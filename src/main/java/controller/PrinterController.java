@@ -9,17 +9,26 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
 @Controller
 public class PrinterController{
 
-        private List<Printer> list;
-    HibernateDao hibernateDao = new HibernateDao();
+    private List<Printer> list;
+    private HibernateDao hibernateDao = new HibernateDao();
+
 
         public PrinterController() {
             list = hibernateDao.getPrinters();
+            try {
+                list = hibernateDao.getPrinters();
+            } catch (NullPointerException ex) {
+                ex.getMessage();
+                list=new ArrayList<>();
+                list.add(new Printer());
+            }
         }
 
     @RequestMapping("/printerform")
@@ -29,7 +38,6 @@ public class PrinterController{
 
         @RequestMapping(value="/savePrinter", method = RequestMethod.POST)
         public ModelAndView save(@ModelAttribute("printer") Printer printer){
-
             if(printer.getId() < 1) {
                 System.out.println("New printer");
                 System.out.println(printer.getId());
@@ -44,7 +52,7 @@ public class PrinterController{
                 list.sort(Comparator.comparing(Printer::getId));
             }
             System.out.println(printer.getName()+" "+ printer.getId());
-            return new ModelAndView("redirect:/vieprinters");
+            return new ModelAndView("redirect:/viewprinters");
         }
 
         @RequestMapping(value="/deletePrinter", method=RequestMethod.POST)

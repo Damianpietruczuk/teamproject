@@ -1,63 +1,73 @@
 body {
     font-family: "Myanmar Text";
-
+    background: rgb(169,165,237);
+    background: linear-gradient(72deg, rgba(169,165,237,1) 0%, rgba(50,50,195,1) 50%, rgba(45,181,209,1) 100%);
+    color: white;
 }
 
 h1 {
-    background-color: lightskyblue;
     font-size: 60px;
-    color: white;
     text-align-all: center;
     display: flex;
     justify-content: center;
     padding-top: 1.75%;
-    border-radius: 50px;
-    border: 4.5px solid dodgerblue;
 }
 
 table {
-    margin-top: 8%;
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
     position: absolute;
-    top: 50%;
-    left: 40%;
+    top: 47%;
+    left: 36%;
     transform: translate(0, -50%);
     color: white;
-    border: none;
     font-family: "Impact";
-    color:black;
     margin-left: auto;
     margin-right: auto;
-
 }
 
+table[class="printerform"]{
+    left: 39.5%;
+}
 
+table, td, th {
+    border-bottom: 3px solid white;
+    border-collapse: collapse;
+}
+
+td[class="last"]{
+    border-bottom: 0px;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-top: 33%;
+}
+
+input[class="btn"]{
+    width: 8%;
+    margin-left: 15px;
+    margin-right: 15px;
+}
 
 td {
-    background-color: lightskyblue;
+
+    color: white;
     font-size: 16px;
     line-height: 2;
     letter-spacing: 2px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 8px;
-    border-radius: 15px;
-    border: 3px solid dodgerblue;
 }
 
 td:hover {
-    background-color:  orange;
+    color:  orange;
 }
 
-input[type="submit"] {
-    display:block;
-    box-sizing: border-box;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 4px;
+td[class="lastPrinter"]{
+    border-bottom: 0px;
 }
-
-a{
-    display: flex;
-    justify-content: center;
-}
-

@@ -2,9 +2,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <style><%@include file="/WEB-INF/css/styleEF.css"%></style>
 <html lang="pl-PL">
-<head>
-    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-</head>
 <h1>Add New Employee</h1>
 <form:form method="post" action="save">
     <table cellspacing="5" cellpadding="5">
@@ -41,17 +38,19 @@
             <td><form:input type="email" path="email"/></td>
         </tr>
         <tr>
-            <td>StartJobDate :</td>
-            <td></td>
-        </tr>
-
-        <tr>
-            <td colspan="2" width="100%"><input type="submit" value="Save" /></td>
+            <td class="last">StartJobDate : dd/mm/yyyy</td>
+            <td class="last"><form:input path="startJobDate"/></td>
         </tr>
     </table>
+<div>
+            <input class="btn" type="submit" value="Save" />
+
+            <form:form method="get" action="db">
+                <input class="btn"  type="submit" value="db"/>
+            </form:form>
+</div>
+
 </form:form>
-<form:form method="get" action="db">
-    <input type="submit" value="db"/>
-</form:form>
+
 </html>
 

@@ -4,13 +4,14 @@ import hibernate.Employees;
 import hibernate.HibernateDao;
 import hibernate.MainHibernate;
 import mail.SendEmail;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
@@ -20,8 +21,22 @@ public class EmpController {
     private List<Employees> list;
     HibernateDao hibernateDao = new HibernateDao();
 
+
     public EmpController() {
         list = hibernateDao.getEmployees();
+        try {
+            list = hibernateDao.getEmployees();
+        } catch (NullPointerException ex) {
+            ex.getMessage();
+            list=new ArrayList<>();
+            list.add(new Employees());
+        }
+    }
+
+    @InitBinder
+    public void initBinder(WebDataBinder binder){
+        binder.registerCustomEditor(       Date.class,
+                new CustomDateEditor(new SimpleDateFormat("dd/MM/yyyy"), true, 10));
     }
 
     @RequestMapping("/empform")
@@ -31,7 +46,6 @@ public class EmpController {
 
     @RequestMapping(value="/db")
     public ModelAndView initiateDB(){
-//        list.add(Arrays.asList())
         MainHibernate.main();
         list = hibernateDao.getEmployees();
         return new ModelAndView("redirect:/viewemp");
