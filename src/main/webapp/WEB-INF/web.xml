@@ -16,7 +16,7 @@
   </context-param>
   <filter>
     <filter-name>UTF8Filter</filter-name>
-    <filter-class>database.UTF8Filter</filter-class>
+    <filter-class>hibernate.UTF8Filter</filter-class>
   </filter>
 
   <filter-mapping>

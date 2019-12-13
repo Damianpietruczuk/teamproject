@@ -25,5 +25,6 @@ public class MainHibernate {
         hibernateDao.getPhones().forEach(System.out::println);
         hibernateDao.saveHibernateEntity(printer);
         hibernateDao.getPrinters().forEach(System.out::println);
+
     }
 }

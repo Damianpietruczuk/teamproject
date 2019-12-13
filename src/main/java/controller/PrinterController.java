@@ -16,9 +16,9 @@ import java.util.List;
 public class PrinterController{
 
         private List<Printer> list;
+    HibernateDao hibernateDao = new HibernateDao();
 
         public PrinterController() {
-            HibernateDao hibernateDao = new HibernateDao();
             list = hibernateDao.getPrinters();
         }
 
@@ -29,7 +29,6 @@ public class PrinterController{
 
         @RequestMapping(value="/savePrinter", method = RequestMethod.POST)
         public ModelAndView save(@ModelAttribute("printer") Printer printer){
-            HibernateDao hibernateDao = new HibernateDao();
 
             if(printer.getId() < 1) {
                 System.out.println("New printer");
@@ -52,7 +51,6 @@ public class PrinterController{
         public ModelAndView delete(@RequestParam String id){
             Printer printer=getPrinterById(Integer.parseInt(id));
             list.remove(printer);
-            HibernateDao hibernateDao = new HibernateDao();
             hibernateDao.deleteHibernateEntity(printer);
             return new ModelAndView("redirect:/viewprinters");
         }
@@ -70,7 +68,6 @@ public class PrinterController{
 
         @RequestMapping("/viewprinters")
         public ModelAndView viewprinter(){
-            HibernateDao hibernateDao = new HibernateDao();
             list = hibernateDao.getPrinters();
             return new ModelAndView("viewprinters","list", list);
         }

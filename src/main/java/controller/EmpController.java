@@ -18,9 +18,9 @@ import java.util.List;
 @Controller
 public class EmpController {
     private List<Employees> list;
+    HibernateDao hibernateDao = new HibernateDao();
 
     public EmpController() {
-        HibernateDao hibernateDao = new HibernateDao();
         list = hibernateDao.getEmployees();
     }
 
@@ -33,7 +33,6 @@ public class EmpController {
     public ModelAndView initiateDB(){
 //        list.add(Arrays.asList())
         MainHibernate.main();
-        HibernateDao hibernateDao = new HibernateDao();
         list = hibernateDao.getEmployees();
         return new ModelAndView("redirect:/viewemp");
     }
@@ -41,7 +40,6 @@ public class EmpController {
     @RequestMapping(value="/save", method = RequestMethod.POST)
     public ModelAndView save(@ModelAttribute("employees") Employees employees){
         employees.setStartJobDate(new Date());
-        HibernateDao hibernateDao = new HibernateDao();
         if(employees.getId() < 1) {
             System.out.println("New emp");
             System.out.println(employees.getId());
@@ -68,7 +66,6 @@ public class EmpController {
         Employees employees=getEmployeesById(Integer.parseInt(id));
         SendEmail.sendMessage("Deleted", employees.toString(), "", employees.getEmail());
         list.remove(employees);
-        HibernateDao hibernateDao = new HibernateDao();
         hibernateDao.deleteHibernateEntity(employees);
         return new ModelAndView("redirect:/viewemp");
     }

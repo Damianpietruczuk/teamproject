@@ -1,4 +1,4 @@
-package database;
+package hibernate;
 
 
 import javax.servlet.*;
