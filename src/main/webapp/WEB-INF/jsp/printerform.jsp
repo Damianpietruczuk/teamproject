@@ -12,24 +12,7 @@
         </tr>
         <tr>
             <td>EmployeesByID :</td>
-            <c:forEach var="employees" items="${list}">
-        <tr>
-            <td>${employees.id}</td>
-            <td>${employees.firstName} ${employees.lastName}</td>
-            <td>${employees.salary}</td>
-
-            <td>
-                <form:form method="post" action="deletePrinter">
-                    <input type="hidden" id="id" name="id" value="${printer.id}"/>
-                    <input type="submit" class="button" name="Delete" value="delete"/>
-                </form:form>
-                <form:form method="post" action="editPrinter">
-                    <input type="hidden" id="id" name="id" value="${printer.id}"/>
-                    <input type="submit" class="button" name="Edit" value="edit"/>
-                </form:form>
-            </td>
-        </tr>
-        </c:forEach>
+            <td><form: input path="Employee_id"></form:></td>
         </tr>
 
         <tr>

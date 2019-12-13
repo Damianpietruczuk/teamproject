@@ -66,4 +66,10 @@ public class HibernateDao {
             return session.createQuery("from Printer", Printer.class).list();
         }
     }
+
+    public List<Printer> getCars() {
+        try (Session session = HibernateConfig.getSessionFactory().openSession()) {
+            return session.createQuery("from Cars", Printer.class).list();
+        }
+    }
 }

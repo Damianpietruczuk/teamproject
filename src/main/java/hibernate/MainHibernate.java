@@ -21,10 +21,13 @@ public class MainHibernate {
 
         Printer printer = new Printer("Hp", employeesSet);
 
+        Car car = new Car("Opel", "Astra");
+
         hibernateDao.saveHibernateEntity(phones);
         hibernateDao.getPhones().forEach(System.out::println);
         hibernateDao.saveHibernateEntity(printer);
         hibernateDao.getPrinters().forEach(System.out::println);
+        hibernateDao.saveHibernateEntity(car);
 
     }
 }

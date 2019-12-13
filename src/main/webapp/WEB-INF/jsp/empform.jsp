@@ -44,13 +44,10 @@
     </table>
 <div>
             <input class="btn" type="submit" value="Save" />
-
-            <form:form method="get" action="db">
-                <input class="btn"  type="submit" value="db"/>
-            </form:form>
-</div>
-
 </form:form>
-
+    <form:form method="get" action="db">
+        <input class="btn1" type="submit" value="database"/>
+    </form:form>
+</div>
 </html>
 

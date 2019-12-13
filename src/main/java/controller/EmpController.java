@@ -44,7 +44,7 @@ public class EmpController {
         return new ModelAndView("empform","command", new Employees());
     }
 
-    @RequestMapping(value="/db")
+    @RequestMapping(value="/db",  method = RequestMethod.GET)
     public ModelAndView initiateDB(){
         MainHibernate.main();
         list = hibernateDao.getEmployees();

@@ -64,10 +64,11 @@ public class Employees implements HibernateEntity {
     @OneToMany(mappedBy = "employees", orphanRemoval = true, fetch = FetchType.EAGER)
     @ToString.Exclude
     private Set<Phones> phones;
-
-//    @OneToMany(mappedBy = "employees", orphanRemoval = true, fetch = FetchType.EAGER)
+//
+//    @OneToOne(mappedBy = "employees", cascade = CascadeType.ALL,
+//            fetch = FetchType.LAZY, optional = false)
 //    @ToString.Exclude
-//    private Set<Printer> printers;
+//    private Car car;
 
     @ManyToMany(mappedBy = "employees", fetch = FetchType.EAGER)
     @Getter @Setter
